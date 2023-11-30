@@ -3,6 +3,8 @@
   angular.module('DIApp', [])
   .controller('DIController', DIController);
 
+DIController.$inject = ['$scope', '$filter'];
+
   function DIController($scope, $filter){
     $scope.name = "Hiren";
 
@@ -11,10 +13,4 @@
       $scope.name = upCase($scope.name);
     };
   }
-
-  function AnotateMe(name, job, blah){
-    return "Blah!";
-  }
-  console.log(AnotateMe.toString());
-})
-();
+})();
