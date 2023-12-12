@@ -18,4 +18,4 @@
       $scope.stateOfBeing = "02";
     };
   }
-})();
+})(); 

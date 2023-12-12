@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" ng-app='MsgApp'>
   <head>
     <meta charset="utf-8">
     <script src="angular.min.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
-    <title></title>
+    <title>Filter</title>
   </head>
   <body>
+    <h1>Custom Filter</h1>
+    <div ng-controller='MsgController'>
+      {{sayMessage()}}
+      Original: {{sayMesage()}} <br>
+      Loves:  {{sayLovesMessage()}} <br>
+      Truth: {{sayLovesMessage() | truth : 'healthy' : 'cookie'}} <br>
+      Big Truth: {{sayLovesMessage() | truth : 'healthy' : 'cookie' | uppercase}}
+    </div>
 
   </body>
 </html>
